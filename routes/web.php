@@ -14,5 +14,35 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+
+    $data = [
+        'teams' => [
+            'ferrari',
+            'red bul',
+            'alpine',
+        ],
+
+        'drivers' => [
+            // 'sainz',
+            // 'checo',
+            // 'ocon'
+        ]
+    ];
+
+    return view('home', $data);
+
+})->name('home');
+
+
+Route::get('/favoriti', function () {
+
+    $data = [
+        'drivers' => [
+            'le clerc',
+            'max',
+        ],
+    ];
+
+    return view('favoriti', $data);
+
+})->name('favoriti');
