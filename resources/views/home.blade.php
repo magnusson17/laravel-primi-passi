@@ -7,9 +7,12 @@
     <title>Document</title>
 </head>
 <body>
+
+    <?php include __DIR__ . '/navbar.blade.php' ?>
+
     <h2>hello world</h2>
 
-    <a href="{{ route('favoriti')}} ">Vai a favoriti</a>
+    <a href=" {{ route('favoriti') }} ">Vai a favoriti</a>
 
     <ul>
 
